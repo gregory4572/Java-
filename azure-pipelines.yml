@@ -7,10 +7,10 @@ trigger:
 - test
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: macos-latest
 
 steps:
-- task: Maven@3
+- task: Maven@4
   inputs:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx30721m'

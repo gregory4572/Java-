@@ -26,4 +26,9 @@ steps:
     summaryFileLocation: "$(System.DefaultWorkingDirectory)/**/site/jacoco/jacoco.xml"
     reportDirectory: "$(System.DefaultWorkingDirectory)/**/site/jacoco"
     failIfCoverageEmpty: true
+
+- task: SonarCloudPrepare@1
+  inputs:
+        organization: 'gumede'
+        scannerMode: 'Other'
 - task: SonarCloudAnalyze@1
